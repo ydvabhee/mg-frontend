@@ -5,6 +5,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import GameCategory from './components/GameCategory';
+import Game from './components/Game';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -14,6 +15,7 @@ function App() {
       <div>
       <Routes>
         <Route path="/" element={<GameCategory />} />
+        <Route path="/game/:category" element={<Game />} />
         {/* <Route path="/login" element={<Login />} />
         <Route path="/team-invite/:token?" element={<TeamInvite />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />

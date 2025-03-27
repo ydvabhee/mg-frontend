@@ -1,17 +1,5 @@
 import React from 'react'
-
-// function GameCategory() {
-//   return (
-//     <>
-//     <div class="max-w-sm rounded overflow-hidden shadow-lg p-2 bg-white">
-//     <div class="px-6 py-4">
-//     <div class="font-bold text-xl mb-2 text-gray-700">The Coldest Sunset</div>
-//     </div>
-// </div>
-//     </>
-
-//   )
-// }
+import { useNavigate } from 'react-router-dom'
 
 
 const CategoryCard = ({ title, description }) => {
@@ -30,13 +18,16 @@ const categories = [
   { title: 'Country', description: 'Games that require careful planning and tactics.' },
 ]
 const GameCategory = () => {
+  const navigate = useNavigate()
+  const handleCategoryClick = (category) => {
+    navigate(`/game/${category}`)
+  }
   return (
     <>
     <div className='text-3xl mb-4 font-bold'> Select a category</div>
-    
     <div className="flex flex-wrap justify-center max-w-lg">
       {categories.map((category, index) => (
-        <div key={index} className="m-2">
+        <div key={index} className="m-2" onClick={handleCategoryClick.bind(null, category.title)}>
           <CategoryCard title={category.title} description={category.description} />
         </div>
       ))}
