@@ -16,18 +16,6 @@ function App() {
       <Routes>
         <Route path="/" element={<GameCategory />} />
         <Route path="/game/:category" element={<Game />} />
-        {/* <Route path="/login" element={<Login />} />
-        <Route path="/team-invite/:token?" element={<TeamInvite />} />
-        <Route path="/forgot-password" element={<ForgotPassword />} />
-        <Route path="/reset-password" element={<ResetPassword />} />
-        <Route path="/logout" element={<ProtectedRouteWithContext><Logout /></ProtectedRouteWithContext>} />
-        <Route path="/profile" element={<ProtectedRouteWithContext><Profile /></ProtectedRouteWithContext>} />
-        <Route path="/welcome" element={<ProtectedRouteWithContext><Welcome /></ProtectedRouteWithContext>} />
-        <Route path="/onboarding/:companyId" element={<ProtectedRoute><Welcome /></ProtectedRoute>} />
-        <Route path="/oauth/callback" element={<ProtectedRouteWithContext><ThirdPartAuthSuccess /></ProtectedRouteWithContext>} />
-        <Route path="/success/:sessionId?" element={<ProtectedRouteWithContext><PaymentSuccess /></ProtectedRouteWithContext>} />
-        <Route path="/" element={<ProtectedRouteWithContext><Home /></ProtectedRouteWithContext>} />
-        <Route path="*" element={<Navigate to="/not-found" replace />} /> */}
       </Routes>
     </div>
     </>
