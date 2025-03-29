@@ -15,9 +15,23 @@ function App() {
   const [score, setScore] = useState(0)
   const [moves, setMoves] = useState(0)
   const [startTime, setStartTime] = useState(0)
+  const [selectedThemeId, setSelectedThemeId] = useState("")
+  const [gameId, setGameId] = useState("")
+ 
 
   return (
-    <gameContext.Provider value={{ score, setScore, moves, setMoves, startTime, setStartTime }}>
+    <gameContext.Provider value={{ 
+      score, 
+      setScore, 
+      moves, 
+      setMoves, 
+      startTime, 
+      setStartTime, 
+      selectedThemeId,
+      setSelectedThemeId,
+      gameId,
+      setGameId
+       }}>
       <Routes>
         <Route path="/" element={<GameCategory />} />
         <Route path="/game/:category" element={<Game />} />

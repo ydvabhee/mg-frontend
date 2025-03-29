@@ -3,11 +3,15 @@ import {createContext} from "react";
 // Contexts
 export const gameContext = createContext({
   score: 0,
-  setScore: (x) => {},
+  setScore: (args) => {},
   moves: 0,
-  setMoves: (x) => {},
+  setMoves: (args) => {},
   startTime: 0,
-  setStartTime: (x) => {},
+  setStartTime: (args) => {},
   data: [],
   setData: () => {},
+  selectedThemeId: "",
+  setSelectedThemeId: (args) => {},
+  gameId: "",
+  setGameId: (args) => {},
 })

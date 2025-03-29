@@ -19,12 +19,7 @@ export const FlipCard = ({
     if (onFlipChange) {
        
         if (flip) {
-           onFlipChange({
-                index,
-                id: item.id,
-                value: item.value,
-                face: "back",
-           });
+           onFlipChange(item, index);
         } else {
          onFlipChange({
           index,
