@@ -31,6 +31,9 @@ export const startGame = async (themeId) => {
 
 
 export const makeMove = async (gameId, selectedCardIds) => {
+  try {
+    
+ 
   const url = `${BASE_URL}/game/move`
   const res = await fetch(
     url,
@@ -59,6 +62,10 @@ export const makeMove = async (gameId, selectedCardIds) => {
 
   const data = await res.json() 
   return data
+} catch (error) {
+  toast.error(error.message || 'An error occurred')
+  throw error
+}
 }
 
 export const fetchSummary = async (gameId) => {

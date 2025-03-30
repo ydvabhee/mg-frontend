@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  vite-app:
+    build: .
+    container_name: vite-container
+    ports:
+      - "3000:80"
+    environment:
+      - VITE_SERVER_BASE_URL=http://localhost:5000/api/v1
+    restart: always
+    networks:
+      - my-network
+
+networks:
+  my-network:
