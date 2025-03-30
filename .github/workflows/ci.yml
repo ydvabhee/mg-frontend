@@ -1,0 +1,31 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up environment
+        uses: actions/setup-node@v3  # Change for different languages
+        with:
+          node-version: 18  # Update based on your project requirements
+
+      - name: Install dependencies
+        run: npm install  # Use the appropriate package manager (pip, yarn, etc.)
+
+      - name: Run tests
+        run: npm test  # Change command based on your framework (e.g., pytest, jest, etc.)
+
+  
