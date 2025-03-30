@@ -1,3 +1,4 @@
+import toast from "react-hot-toast"
 
 
 
@@ -13,6 +14,7 @@ export const fetchTheme = async () => {
     const statusText = res.statusText
     const data = await res.text()
     const message = data ? JSON.parse(data).message : statusText
+    toast.error(message)
     console.error(status, statusText, message)
     throw new Error('Failed to fetch data')
   }

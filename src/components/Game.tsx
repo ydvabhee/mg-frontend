@@ -1,11 +1,10 @@
-import React, { useContext, useEffect } from 'react'
-import ScroreBoard from './ScroreBoard'
-import { FlipCard } from './FlipCard'
+import React, { useEffect } from 'react'
 import Grid from './Grid'
 import { gameContext } from '../store'
 import { fetchContent } from '../services/content'
 import { useNavigate } from 'react-router-dom'
 import { startGame } from '../services/game'
+import toast from 'react-hot-toast'
 
 
 
@@ -18,11 +17,8 @@ function Game() {
   const [loading, setLoading] = React.useState(true)
   
   const handleCardsFetch = async () => {
-  
-      
       const data = await fetchContent(selectedThemeId)
       setCards(data)
-    
   }
 
   const handleStartGame = async () => {
@@ -31,6 +27,7 @@ function Game() {
       setScore(data.score)
       setMoves(data.moves)
       console.log(data)
+      toast.success("Game started")
   }
 
 
@@ -62,7 +59,6 @@ function Game() {
  
   return (
     <div>
-      <ScroreBoard />
       <Grid cards={cards}/>
     </div>
   )

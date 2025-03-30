@@ -14,12 +14,7 @@ const CategoryCard = ({ title, description }) => {
     </div>
   )
 }
-const categories = [
-  { title: 'Animal', description: 'Fast-paced games that require quick reflexes.' },
-  { title: 'Flowers', description: 'Exploration and puzzle-solving games.' },
-  { title: 'Fruits', description: 'Role-playing games with character development.' },
-  { title: 'Country', description: 'Games that require careful planning and tactics.' },
-]
+
 const GameCategory = () => {
   const {setSelectedThemeId} = React.useContext(gameContext)
   

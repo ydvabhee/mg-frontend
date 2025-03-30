@@ -1,3 +1,4 @@
+import toast from "react-hot-toast"
 
 const BASE_URL = import.meta.env.VITE_SERVER_BASE_URL
 export const fetchContent = async (themeId) => {
@@ -11,6 +12,7 @@ export const fetchContent = async (themeId) => {
     const statusText = res.statusText
     const data = await res.text()
     const message = data ? JSON.parse(data).message : statusText
+     toast.error(message)
     console.error(status, statusText, message)
     throw new Error('Failed to fetch data')
   }
