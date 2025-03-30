@@ -26,7 +26,7 @@ function Game() {
       setGameId(data._id)
       setScore(data.score)
       setMoves(data.moves)
-      console.log(data)
+      // console.log(data)
       toast.success("Game started")
   }
 

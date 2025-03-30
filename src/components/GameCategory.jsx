@@ -28,7 +28,7 @@ const GameCategory = () => {
 
   const handleFetchTheme = async () => {
     const data = await fetchTheme()
-    console.log(data)
+    // console.log(data)
     setThemes(data)
     setLoading(false)
   }
