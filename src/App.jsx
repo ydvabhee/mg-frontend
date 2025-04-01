@@ -9,6 +9,7 @@ import Game from './components/Game';
 import {gameContext} from './store';
 import ScroreBoard from './components/ScroreBoard';
 import { Toaster } from 'react-hot-toast';
+import {ErrorBoundary} from './utills/ErrorBoundary';
 
 
 
@@ -21,7 +22,7 @@ function App() {
 
 
   return (
-    <>
+    <ErrorBoundary>
       <Toaster />
       <gameContext.Provider value={{
         score,
@@ -40,7 +41,8 @@ function App() {
           <Route path="/game/:category" element={<Game />} />
           <Route path="/game/summary" element={<ScroreBoard />} />
         </Routes>
-      </gameContext.Provider> </>
+      </gameContext.Provider> 
+    </ErrorBoundary>
   )
 }
 
