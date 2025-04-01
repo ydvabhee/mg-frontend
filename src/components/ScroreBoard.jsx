@@ -6,9 +6,8 @@ import {useNavigate} from 'react-router-dom'
 function ScroreBoard() {
 
   const navigate = useNavigate()
-  const {score, setScore, moves, setMoves, startTime, setStartTime, gameId} = React.useContext(gameContext)
+  const { gameId} = React.useContext(gameContext)
   const [timeTaken, setTimeTaken] = React.useState("00:00:00")
-
   const [finalScore, setFinalScore] = React.useState(0)
   const [totalMoves, setTotalMoves] = React.useState(0)
 
@@ -28,10 +27,11 @@ function ScroreBoard() {
   useEffect(() => {
     if(!gameId){
       navigate(`/`)
-      return
+ 
+    } else {
+      handleFetchSummary()
     }
      
-    handleFetchSummary()
   },[gameId])
 
 

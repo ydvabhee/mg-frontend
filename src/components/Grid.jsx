@@ -78,12 +78,11 @@ function Grid({cards}) {
     setData(temp)
   }
 
-
   return (
     <div><div className='flex justify-center items-center mt-4 p-1 md:p-2 lg:p-4  rounded shadow-[0px_0px_15px_0px_#4a5568]'>
       <div className="grid grid-cols-6 gap-1 md:gap-2 lg:gap-4">
         {data.map((item, index) =>
-          <FlipCard flip={item.selected} key={index} index={index} item={item} height={80} width={80} autoFlip={true} onFlipChange={handleMove} >
+          <FlipCard flip={item.selected} key={index} index={index} item={item} onFlipChange={handleMove} >
             <div
               className="group bg-blue-500 text-white flex items-center justify-center absolute inset-0 h-full w-full rounded-xl [backface-visibility:hidden]">
               <span className='hidden group-hover:block'> <BiSolidShow /> </span>

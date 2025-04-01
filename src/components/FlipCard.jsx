@@ -5,12 +5,8 @@ import React, { FC, useEffect, useState } from "react";
 export const FlipCard = ({
   item,
   index,
-  height = 48,
-  width = 48,
   children,
-  autoFlip,
   flip = false,
-  timeInterval = 2000,
   onFlipChange,
 }) => {
   // const [flip, setFlip] = useState(false);
