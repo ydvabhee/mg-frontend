@@ -89,10 +89,10 @@ Create a file named `.env` in the root of your project directory. This file stor
 
 1.  Click on any card to reveal its image.
 2.  Click on a second card to try and find a match.
-3.  If the cards match, they will remain face up.
+3.  If the cards match, they will disapear.
 4.  If they don't match, they will flip back over after a short delay.
 5.  Continue flipping cards until all pairs have been matched.
-6.  *(Optional: Mention any scoring, timer, or move count features)*
+
 
 ## 🏗️ Building for Production
 
