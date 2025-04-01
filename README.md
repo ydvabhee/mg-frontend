@@ -2,6 +2,10 @@
 
 A classic memory matching card game built with React, Vite, and styled with Tailwind CSS. Test your memory and find all the pairs!
 
+This application is deployed at: [mg-backend-app.onrender.com](https://mg-backend-app.onrender.com/)
+#### Note: If the server has been inactive for a while, it may take 30 seconds to 1 minute to load.
+
+
 ![Memory Game Demo Video](link/to/your/screenshot.png) 
 
 ## ✨ Features
